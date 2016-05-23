@@ -1,0 +1,23 @@
+/*@!Encoding:1250*/
+includes
+{
+  
+}
+
+variables
+{
+  
+}
+
+on start
+{
+  Write("Tester module started.");
+}
+
+on message *
+{
+  Write("Message intercepted.");
+  
+  Write("Message ID: %d", this.id);
+  
+}

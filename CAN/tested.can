@@ -1,0 +1,17 @@
+/*@!Encoding:1250*/
+includes
+{
+  
+}
+
+variables
+{
+  message msg u;
+}
+
+on start
+{
+  Write("Tested module started.");
+ u.id = 0x34; 
+  output(u);
+}
