@@ -36,6 +36,16 @@ BS_:
 BU_: Tested
 
 
+BO_ 0 msg: 8 Vector__XXX
+ SG_ byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 BA_DEF_  "BusType" STRING ;
