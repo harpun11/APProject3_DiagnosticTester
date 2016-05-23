@@ -6,12 +6,63 @@ includes
 
 variables
 {
-  message msg u;
+  message msg response;
 }
 
 on start
 {
-  Write("Tested module started.");
- u.id = 0x34; 
-  output(u);
+  Write("Tested module started");
+}
+
+on message *
+{
+  if (this.ID == 0x512 && this.dlc == 8)
+  {
+    switch(this.byte(0))
+    {
+      case 0:
+      {
+        response.byte0 = this.byte(0);
+        response.byte1 = this.byte(1);
+        response.byte2 = this.byte(2);
+        response.byte3 = this.byte(3);
+        response.byte4 = this.byte(4);
+        response.byte5 = this.byte(5);
+        response.byte6 = this.byte(6);
+        response.byte7 = this.byte(7);
+        break;
+      }
+      case 1:
+      {
+        response.byte0 = 'O';
+        response.byte1 = 'L';
+        response.byte2 = 'O';
+        response.byte3 = 0;
+        break;
+      }
+      case 2:
+      {
+        response.byte0 = 'M';
+        response.byte1 = 'A';
+        response.byte2 = 'R';
+        response.byte3 = 'Y';
+        response.byte4 = 0;
+        break;
+      }
+      case 3:
+      {
+        response.byte0 = 'B';
+        response.byte1 = 'A';
+        response.byte2 = 'N';
+        response.byte3 = 'D';
+        response.byte4 = 'R';
+        response.byte5 = 'Z';
+        response.byte6 = 'E';
+        response.byte7 = 'J';
+        break;
+      }
+    }
+    
+    output(response);
+  }
 }
