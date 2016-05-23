@@ -48,53 +48,57 @@ BO_ 0 msgTx: 8 Tester
 
 
 
-EV_ out7: 0 [0|255] "" 0 1 DUMMY_NODE_VECTOR3  Tester;
+EV_ send: 0 [0|1] "" 0 1 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ out6: 0 [0|255] "" 0 2 DUMMY_NODE_VECTOR3  Tester;
+EV_ start_stop: 0 [0|1] "" 0 2 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ out5: 0 [0|255] "" 0 3 DUMMY_NODE_VECTOR3  Tester;
+EV_ out7: 0 [0|255] "" 0 3 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ out4: 0 [0|255] "" 0 4 DUMMY_NODE_VECTOR3  Tester;
+EV_ out6: 0 [0|255] "" 0 4 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ out3: 0 [0|255] "" 0 5 DUMMY_NODE_VECTOR3  Tester;
+EV_ out5: 0 [0|255] "" 0 5 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ out2: 0 [0|255] "" 0 6 DUMMY_NODE_VECTOR3  Tester;
+EV_ out4: 0 [0|255] "" 0 6 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ out1: 0 [0|255] "" 0 7 DUMMY_NODE_VECTOR3  Tester;
+EV_ out3: 0 [0|255] "" 0 7 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ out0: 0 [0|255] "" 0 8 DUMMY_NODE_VECTOR3  Tester;
+EV_ out2: 0 [0|255] "" 0 8 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ sus7: 0 [0|0] "" 0 9 DUMMY_NODE_VECTOR3 Vector__XXX;
+EV_ out1: 0 [0|255] "" 0 9 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ sus6: 0 [0|255] "" 0 10 DUMMY_NODE_VECTOR3  Tester;
+EV_ out0: 0 [0|255] "" 0 10 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ sus5: 0 [0|255] "" 0 11 DUMMY_NODE_VECTOR3  Tester;
+EV_ sus7: 0 [0|255] "" 0 11 DUMMY_NODE_VECTOR3 Vector__XXX;
 
-EV_ sus4: 0 [0|255] "" 0 12 DUMMY_NODE_VECTOR3  Tester;
+EV_ sus6: 0 [0|255] "" 0 12 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ sus3: 0 [0|255] "" 0 13 DUMMY_NODE_VECTOR3  Tester;
+EV_ sus5: 0 [0|255] "" 0 13 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ sus2: 0 [0|255] "" 0 14 DUMMY_NODE_VECTOR3  Tester;
+EV_ sus4: 0 [0|255] "" 0 14 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ sus1: 0 [0|255] "" 0 15 DUMMY_NODE_VECTOR3  Tester;
+EV_ sus3: 0 [0|255] "" 0 15 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ sus0: 0 [0|255] "" 0 16 DUMMY_NODE_VECTOR3  Tester;
+EV_ sus2: 0 [0|255] "" 0 16 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ in0: 0 [0|255] "" 0 17 DUMMY_NODE_VECTOR3  Tester;
+EV_ sus1: 0 [0|255] "" 0 17 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ in7: 0 [0|255] "" 0 18 DUMMY_NODE_VECTOR3  Tester;
+EV_ sus0: 0 [0|255] "" 0 18 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ in6: 0 [0|255] "" 0 19 DUMMY_NODE_VECTOR3  Tester;
+EV_ in0: 0 [0|255] "" 0 19 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ in5: 0 [0|255] "" 0 20 DUMMY_NODE_VECTOR3  Tester;
+EV_ in7: 0 [0|255] "" 0 20 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ in4: 0 [0|255] "" 0 21 DUMMY_NODE_VECTOR3  Tester;
+EV_ in6: 0 [0|255] "" 0 21 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ in3: 0 [0|255] "" 0 22 DUMMY_NODE_VECTOR3  Tester;
+EV_ in5: 0 [0|255] "" 0 22 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ in2: 0 [0|255] "" 0 23 DUMMY_NODE_VECTOR3  Tester;
+EV_ in4: 0 [0|255] "" 0 23 DUMMY_NODE_VECTOR3  Tester;
 
-EV_ in1: 0 [0|255] "" 0 24 DUMMY_NODE_VECTOR3  Tester;
+EV_ in3: 0 [0|255] "" 0 24 DUMMY_NODE_VECTOR3  Tester;
+
+EV_ in2: 0 [0|255] "" 0 25 DUMMY_NODE_VECTOR3  Tester;
+
+EV_ in1: 0 [0|255] "" 0 26 DUMMY_NODE_VECTOR3  Tester;
 
 BA_DEF_  "BusType" STRING ;
 BA_DEF_DEF_  "BusType" "CAN";
