@@ -36,6 +36,16 @@ BS_:
 BU_: Tester
 
 
+BO_ 0 msgTx: 8 Tester
+ SG_ byte7 : 56|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte6 : 48|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte5 : 40|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte4 : 32|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte3 : 24|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte2 : 16|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte1 : 8|8@1+ (1,0) [0|0] "" Vector__XXX
+ SG_ byte0 : 0|8@1+ (1,0) [0|0] "" Vector__XXX
+
 
 
 EV_ out7: 0 [0|255] "" 0 1 DUMMY_NODE_VECTOR3  Tester;
