@@ -6,12 +6,20 @@ includes
 
 variables
 {
+  int session;
+  msTimer diag_ses;
   message msgTx T;
 }
 
 on start
 {
   Write("Tester module started.");
+  session = 0;
+}
+
+on message *
+{
+  //Write("something");
 }
 
 on message msg
@@ -33,8 +41,11 @@ on message msg
 
 on envVar send
 {
+  if (getValue(send))
+    return;
+  
   Write("Messege Tx");
-  T.ID = 0x512;
+  T.ID = 0x252;
   T.DLC = 8;
  
   T.byte0 = @in0;
@@ -47,4 +58,44 @@ on envVar send
   T.byte7 = @in7;
   
   output(T);
+}
+
+on envVar start_stop
+{
+  if (getValue(start_stop))
+    return;
+  
+  if (!session)
+  {
+    Write("start button");
+    SetTimer(diag_ses, 100);
+    session = 1;
+  }
+  else
+  {
+    Write("stop button");
+    cancelTimer(diag_ses);
+    session = 0;
+  }
+}
+
+on timer diag_ses
+{
+  Write("diagnostic session message sent");
+  
+  T.ID = 0x252;
+  T.DLC = 8;
+ 
+  T.byte0 = @sus0;
+  T.byte1 = @sus1;
+  T.byte2 = @sus2;
+  T.byte3 = @sus3;
+  T.byte4 = @sus4;
+  T.byte5 = @sus5;
+  T.byte6 = @sus6;
+  T.byte7 = @sus7;
+  
+  output(T);
+  
+  SetTimer(diag_ses, 100);
 }
