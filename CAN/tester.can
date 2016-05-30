@@ -6,7 +6,7 @@ includes
 
 variables
 {
-  
+  message msgTx T;
 }
 
 on start
@@ -14,10 +14,37 @@ on start
   Write("Tester module started.");
 }
 
-on message *
+on message msg
 {
   Write("Message intercepted.");
   
   Write("Message ID: %d", this.id);
+  Write("%c%c%c%c%c%c%c%c",this.byte0,this.byte1,this.byte2,this.byte3,this.byte4,this.byte5,this.byte6,this.byte7);
   
+  @out0 = this.byte0;
+  @out1 = this.byte1;
+  @out2 = this.byte2;
+  @out3 = this.byte3;
+  @out4 = this.byte4;
+  @out5 = this.byte5;
+  @out6 = this.byte6;
+  @out7 = this.byte7;
+}
+
+on envVar send
+{
+  Write("Messege Tx");
+  T.ID = 0x512;
+  T.DLC = 8;
+ 
+  T.byte0 = @in0;
+  T.byte1 = @in1;
+  T.byte2 = @in2;
+  T.byte3 = @in3;
+  T.byte4 = @in4;
+  T.byte5 = @in5;
+  T.byte6 = @in6;
+  T.byte7 = @in7;
+  
+  output(T);
 }

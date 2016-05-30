@@ -321,8 +321,7 @@
       <Property Name="Size">75, 23</Property>
       <Property Name="Location">465, 115</Property>
       <Property Name="Text">Send</Property>
-      <Property Name="SymbolConfiguration">
-      </Property>
+      <Property Name="SymbolConfiguration">4;1;db_Tester;;;send;1;;;-1</Property>
       <Property Name="TabIndex">9</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.ButtonControl, Vector.CANalyzer.Panels.CommonControls, Version=8.5.98.0, Culture=neutral, PublicKeyToken=null" Name="ButtonControl1" Children="Controls" ControlName="Start/Stop">
@@ -330,8 +329,7 @@
       <Property Name="Size">75, 23</Property>
       <Property Name="Location">465, 49</Property>
       <Property Name="Text">Start/Stop</Property>
-      <Property Name="SymbolConfiguration">
-      </Property>
+      <Property Name="SymbolConfiguration">4;1;db_Tester;;;start_stop;1;;;-1</Property>
       <Property Name="TabIndex">8</Property>
     </Object>
     <Object Type="Vector.CANalyzer.Panels.Design.TextBoxControl, Vector.CANalyzer.Panels.CommonControls, Version=8.5.98.0, Culture=neutral, PublicKeyToken=null" Name="TextBoxControl8" Children="Controls" ControlName="Input/Output Box">
