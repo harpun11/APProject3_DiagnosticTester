@@ -19,24 +19,17 @@ on start
 
 on message *
 {
-  //Write("something");
-}
-
-on message msg
-{
-  Write("Message intercepted.");
+  if (this.id != @ID_out || this.dlc != 8)
+    return;
   
-  Write("Message ID: %d", this.id);
-  Write("%c%c%c%c%c%c%c%c",this.byte0,this.byte1,this.byte2,this.byte3,this.byte4,this.byte5,this.byte6,this.byte7);
-  
-  @out0 = this.byte0;
-  @out1 = this.byte1;
-  @out2 = this.byte2;
-  @out3 = this.byte3;
-  @out4 = this.byte4;
-  @out5 = this.byte5;
-  @out6 = this.byte6;
-  @out7 = this.byte7;
+  @out0 = this.byte(0);
+  @out1 = this.byte(1);
+  @out2 = this.byte(2);
+  @out3 = this.byte(3);
+  @out4 = this.byte(4);
+  @out5 = this.byte(5);
+  @out6 = this.byte(6);
+  @out7 = this.byte(7);
 }
 
 on envVar send
@@ -44,8 +37,7 @@ on envVar send
   if (getValue(send))
     return;
   
-  Write("Messege Tx");
-  T.ID = 0x252;
+  T.ID = @ID_in;
   T.DLC = 8;
  
   T.byte0 = @in0;
@@ -67,13 +59,13 @@ on envVar start_stop
   
   if (!session)
   {
-    Write("start button");
+    Write("Diagnostic session started");
     SetTimer(diag_ses, 100);
     session = 1;
   }
   else
   {
-    Write("stop button");
+    Write("Diagnostic session stopped");
     cancelTimer(diag_ses);
     session = 0;
   }
@@ -81,9 +73,7 @@ on envVar start_stop
 
 on timer diag_ses
 {
-  Write("diagnostic session message sent");
-  
-  T.ID = 0x252;
+  T.ID = @ID_sus;
   T.DLC = 8;
  
   T.byte0 = @sus0;

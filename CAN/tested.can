@@ -16,7 +16,6 @@ on start
 
 on message *
 {
-  Write("Messege Rx");
   if (this.ID == 0x512 && this.dlc == 8)
   {
     switch(this.byte(0))
@@ -63,7 +62,7 @@ on message *
         break;
       }
     }
-    
+    response.id = 9;
     output(response);
   }
   
